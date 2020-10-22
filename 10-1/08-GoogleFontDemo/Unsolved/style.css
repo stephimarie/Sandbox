@@ -1,0 +1,19 @@
+/**
+ * Google Fonts Demo
+ **/
+
+.thought1 
+.thought2
+.thought3
+{
+    font-family:"Architects Daughter", cursive;
+    letter-spacing: 5px;
+    font-size: 30px;
+ }
+
+
+p {
+    font-family: "Architects Daughter", cursive;
+    font-size: 20px;
+}
+/* Add in the Google Fonts of your choice */

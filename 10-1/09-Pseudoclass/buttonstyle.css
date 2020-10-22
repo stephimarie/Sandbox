@@ -1,0 +1,16 @@
+button {
+    background-color: salmon;
+    transition: all 0.3ms ease-out;
+    padding: 50px;
+}
+button:hover  {
+    background-color: red;
+    transform: translate(1px,-3px);
+    box-shadow: 2px 6px gray;
+
+}
+button:active {
+    background-color: black;
+    transform: translate(0px, -0px);
+    box-shadow: none;
+}
