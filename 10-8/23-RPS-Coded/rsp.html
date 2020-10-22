@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <script>
+      // array of possible choices
+      let computerChoices = ["r", "p", "s"];
+      // initial state
+      let wins = 0;
+      let losses = 0;
+      let ties = 0;
+      for (let i = 0; i < 10; i++) {
+        var computerGuess =
+          computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        var userGuess = prompt("Enter the letter: p, s, or r");
+        userGuess = userGuess.toLowerCase();
+        if (userGuess === "r" || userGuess === "p" || userGuess === "s") {
+          if (
+            (userGuess === "r" && computerGuess === "s") ||
+            (userGuess === "s" && computerGuess === "p") ||
+            (userGuess === "p" && computerGuess === "r")
+          ) {
+            wins++;
+            alert(`You've won ${wins} times`);
+            // alert("You've won" + wins + "times");
+          } else if (computerGuess === userGuess) {
+            ties++;
+            alert(
+              `You've ties ${ties} times. Results: ${computerGuess} ${userGuess}`
+            );
+          } else {
+            losses++;
+            alert(`You've lost ${losses} times`);
+          }
+        }
+      }
+      alert(`You've won ${wins} times
+      You've ties ${ties} times
+      You've lost ${losses} times`);
+    </script>
+  </body>
+</html>
+
+
+### Rock Paper Scissors Pseudocode
+1. Prompt user to enter r, p, or s representing rock, paper, or scissors.
+2. Computer chooses a random value in a list of r, p, or s.
+3. We determine if the user wins or not.
+   * If user picks rock and if computer picks scissors then user wins.
+   * If user picks rock and if computer picks paper then user loses.
+   * If user picks scissors and if computer picks rock then user loses.
+   * If user picks scissors and if computer picks paper then user wins.
+   * If user picks paper and if computer picks rock then user wins.
+   * If user picks paper and if computer picks scissors then user loses.
+   * If user picks the same as computer then they tie.
+4. We then add to their score.
+   * If user wins then we add one to their wins.
+   * If user loses then we add one to their losses.
+   * If user ties then we add one to their ties.
+5. Prompt user to play again.
